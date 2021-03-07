@@ -3,8 +3,12 @@ var btn_generate = document.getElementById("btn_generate");
 var input_size = document.getElementById("input_size");
 var margin_size;
 var btnBubble = document.getElementById("btnBubble");
-var speed = 0;
-
+var inputSpeed = document.getElementById("speed");
+var speed =0;
+inputSpeed.addEventListener("change",()=>{
+    speed = 500/inputSpeed.value;
+})
+var initSpeed = 0;
 btn_generate.addEventListener("click", generateArray);
 
 cont = document.getElementById("array_container");
@@ -50,7 +54,7 @@ function divUpdate(element, height, color) {
     window.setTimeout(
         () => {
             element.style = " margin:0% " + margin_size + "%; width:" + (100 / input_size.value - (2 * margin_size)) + "%; height:" + height + "%; background-color:" + color + ";";
-        }, speed += 1);
+        }, initSpeed += speed);
 }
 
 
