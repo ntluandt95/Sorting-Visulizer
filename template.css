@@ -118,3 +118,10 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+.nav-heading{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 60px;
+}
