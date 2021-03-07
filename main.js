@@ -13,6 +13,7 @@ inputSpeed.addEventListener("change", () => {
 
 inputSize.addEventListener("change",()=>{
     input_size = inputSize.value;
+    generateArray();
 })
 
 var initSpeed = 0;
@@ -154,4 +155,5 @@ btnSelection.addEventListener("click", () => {
 
         divUpdate(divsList[i], div_sizes[i], "green");
     }
+    divUpdate(divsList[input_size-1], div_sizes[input_size-1], "green");
 })
